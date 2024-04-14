@@ -1,0 +1,43 @@
+
+import random
+
+def get_choices():
+  player_choice = input("Enter choice - rock, paper or scissor (q to quit)\n")
+  options = ["rock", "paper", "scissor"]
+  computer_choice = random.choice(options)
+  choices = {"player":player_choice, "computer": computer_choice}
+  return choices
+
+def check_win(player, computer):
+  print(f"you chose {player} computer chose {computer}")
+  if player == computer:
+    return "It's a tie"
+  elif player == "rock":
+    if computer == "scissor":
+      return "Rock smashes scissor! You win!"
+    else:
+      return "Paper covers rock! You lose!"
+  elif player == "paper":
+    if computer == "rock":
+      return "Paper covers rock! You win!"
+    else:
+      return "Scissor cuts paper! You lose!"
+  elif player == "scissor":
+    if computer == "paper":
+      return "Scissor cuts paper! You win!"
+    else:
+      return "Rock smashes scissor! You lose!"
+
+inputs = get_choices()
+while(inputs["player"] != "q"):
+    result = check_win(inputs["player"], inputs["computer"])
+    print(f">>>> {result}")
+    inputs = get_choices()
+
+# print(get_choices())
+
+# dict = {"name":"soniya", "color": "blue"}
+
+# food = ["pizza","biryani","salad","fish fry"]
+# dinner = random.choice(food)
+# print(dinner)
