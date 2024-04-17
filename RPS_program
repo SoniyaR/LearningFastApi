@@ -36,7 +36,7 @@ while(inputs["player"] != "q"):
 
 # print(get_choices())
 
-# dict = {"name":"soniya", "color": "blue"}
+# dict = {"name":"test", "color": "blue"}
 
 # food = ["pizza","biryani","salad","fish fry"]
 # dinner = random.choice(food)
